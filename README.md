@@ -2,6 +2,8 @@
 Log4j vulnerability demo
 https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046
 
+![image](src/docs/log4j-jndi.png)
+
 ## CVE: CVE-2021-4428 | CVE-2021-45046
  
 - [x] demo apache log4j2 vuln execute RCE via logs
@@ -17,6 +19,8 @@ https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046
 ## Run postman collection local
 - [x] log4j-vuln-jndi -> it will fire jndi lookup, 
     ``` try to fetch data from internal resource input```
+
+
 
 ## vuln example logs
 ```
